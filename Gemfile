@@ -11,7 +11,8 @@ gem 'compass'
 gem 'compass_twitter_bootstrap'
 gem 'compass-rails'
 
-gem "haml"
+gem 'haml'
+gem 'devise'
 
 
 # Gems used only for assets and not required
