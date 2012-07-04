@@ -1,6 +1,12 @@
 Rblog::Application.routes.draw do
   devise_for :users
 
+  namespace :admin do
+    resources :articles
+  end
+
+  resources :articles
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
