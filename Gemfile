@@ -13,6 +13,7 @@ gem 'compass-rails'
 
 gem 'haml'
 gem 'devise'
+gem 'cancan'
 
 
 # Gems used only for assets and not required

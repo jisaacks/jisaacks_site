@@ -3,5 +3,6 @@ class Admin::ArticlesController < ApplicationController
 
   def new
     render :text => "TODO Add 'new' view"
+    authorize! :create, Article
   end
 end
