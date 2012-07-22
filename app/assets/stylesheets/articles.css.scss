@@ -74,12 +74,15 @@
           right: -15px;
         }
       }
-      ol {
+      pre {
+        border: none;
+      }
+      ol.steps {
         color: $orange;
         font-style: italic;
         margin: 15px;
         padding-left: 15px;
-        li * {
+        li p {
           color: #333;
           font-style: normal;
         }
