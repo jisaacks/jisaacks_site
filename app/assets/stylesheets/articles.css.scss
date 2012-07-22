@@ -61,6 +61,16 @@
           right: -15px;
         }
       }
+      ol {
+        color: $orange;
+        font-style: italic;
+        margin: 15px;
+        padding-left: 15px;
+        li * {
+          color: #333;
+          font-style: normal;
+        }
+      }
     }
   }
 }
