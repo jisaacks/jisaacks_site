@@ -1,4 +1,6 @@
-- @articles.each do |a|
-  %hr
-  = render :partial => 'article', :locals => {article: a}
-  %hr
+.articles
+  - @articles.each do |a|
+    = render :partial => 'article', :locals => {article: a}
+
+.sidebar
+  = render :partial => 'sidebar'

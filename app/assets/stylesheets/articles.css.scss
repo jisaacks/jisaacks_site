@@ -4,35 +4,48 @@
 
 @import "base";
 
-.article {
-  width: 700px;
-  .date {
-    float: left;
-    margin: 10px;
-    margin-bottom: 0;
-    .day {
-      color: $orange;
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 2px;
-    }
-    color: $lite-gray;
-    font-size: 12px;
-  }
-  h1 {
-    line-height: 50px;
-    margin-bottom: 10px;
-    a {
-      color: black;
-      &:hover {
+.articles {
+  width: 698px;
+  padding: 20px;
+  padding-left: 0;
+  border-right: 1px solid $lite-grain;
+  float: left;
+  .article {
+    margin-bottom: 50px;
+    .date {
+      float: left;
+      margin: 10px;
+      margin-bottom: 0;
+      .day {
         color: $orange;
-        text-decoration: none;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 2px;
+      }
+      color: $lite-gray;
+      font-size: 12px;
+    }
+    h1 {
+      line-height: 50px;
+      margin-bottom: 10px;
+      a {
+        color: black;
+        &:hover {
+          color: $orange;
+          text-decoration: none;
+        }
       }
     }
+    .article-content {
+      font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+      font-size: 15px;
+      line-height: 22px;
+    }
   }
-  .article-content {
-    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-    font-size: 15px;
-    line-height: 22px;
-  }
+}
+.sidebar {
+  width: 208px;
+  padding: 20px;
+  padding-right: 0;
+  float: right;
 }
