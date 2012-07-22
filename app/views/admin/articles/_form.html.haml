@@ -1,0 +1,19 @@
+/ - form_tag :action => :create, :method => :post do
+  
+
+- url = @article.id.nil? ? admin_articles_path : admin_article_path(@article)
+= form_for @article, :url => url do |f|
+  = flash[:error]
+  %div
+    = f.label "title"
+    = f.text_field :title
+    - @article.errors[:title].each do |error|
+      = error
+  %div
+    = f.label "Content"
+    = f.text_area :content
+    - @article.errors[:title].each do |error|
+      = error
+  %div
+    - submit_label = @article.id.nil? ? "Create" : "Update"
+    = f.submit submit_label, :class => 'btn'

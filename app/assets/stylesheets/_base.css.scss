@@ -1,1 +1,23 @@
 @import "compass_twitter_bootstrap";
+
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: url("glyphicons-halflings.png");
+}
+.icon-white {
+  background-image: url("glyphicons-halflings-white.png");
+}
+
+.btn {
+  input[type="submit"] {
+    border: none;
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    vertical-align: baseline;
+  }
+}

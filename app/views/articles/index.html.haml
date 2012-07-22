@@ -1,3 +1,6 @@
 - @articles.each do |a|
-  %div= a.title
-  %p= a.content
+  %hr
+  %div
+    %strong= a.title
+  %div= a.content.html_safe
+  %hr
