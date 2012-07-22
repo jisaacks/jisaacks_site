@@ -1,11 +1,13 @@
 Rblog::Application.routes.draw do
   devise_for :users
 
+  root :to => 'articles#index'
+
   namespace :admin do
     resources :articles
   end
 
-  resources :articles
+  resources :articles, :except => :index
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
