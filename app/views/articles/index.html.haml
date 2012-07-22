@@ -1,6 +1,4 @@
 - @articles.each do |a|
   %hr
-  %div
-    %strong= a.title
-  %div= a.content.html_safe
+  = render :partial => 'article', :locals => {article: a}
   %hr

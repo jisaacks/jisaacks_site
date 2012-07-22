@@ -1,3 +1,30 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "base";
+
+.article {
+  .date {
+    float: left;
+    margin: 10px;
+    .day {
+      color: $orange;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    color: $lite-gray;
+    font-size: 12px;
+  }
+  h1 {
+    line-height: 50px;
+    a {
+      color: black;
+      &:hover {
+        color: $orange;
+        text-decoration: none;
+      }
+    }
+  }
+}
