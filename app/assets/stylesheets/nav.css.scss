@@ -1,13 +1,19 @@
 .nav {
   background: url("grain.png");
+  margin-bottom: 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #fbe9d2;
+  text-align: center;
   a {
     line-height: 50px;
     margin: 0 10px;
     color: #5b5041;
     text-shadow: #fbe9d2 1px 1px 1px;
     text-decoration: none;
+    text-align: left;
     font-weight: bold;
     display: inline-block;
+    position: relative;
     &:before {
       content: "temp";
       text-indent: -999px;

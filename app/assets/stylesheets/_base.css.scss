@@ -1,5 +1,10 @@
 @import "compass_twitter_bootstrap";
 
+.width {
+  width: 950px;
+  margin: auto;
+}
+
 [class^="icon-"],
 [class*=" icon-"] {
   background-image: url("glyphicons-halflings.png");
