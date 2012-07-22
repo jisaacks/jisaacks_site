@@ -40,6 +40,19 @@
       font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
       font-size: 15px;
       line-height: 22px;
+      code {
+        &.inline {
+          font-family: Courier, monospace;
+          background: #F7F7F9 !important;
+          border: 1px solid #f0f0f0 !important;
+          color: #D14 !important;
+        }
+        &.common {
+          background: none;
+          border: none;
+          color: #000;
+        }
+      }
       blockquote {
         background: #F7F7F9 !important;
         color: #555;
