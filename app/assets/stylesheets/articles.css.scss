@@ -5,9 +5,11 @@
 @import "base";
 
 .article {
+  width: 700px;
   .date {
     float: left;
     margin: 10px;
+    margin-bottom: 0;
     .day {
       color: $orange;
       font-size: 32px;
@@ -19,6 +21,7 @@
   }
   h1 {
     line-height: 50px;
+    margin-bottom: 10px;
     a {
       color: black;
       &:hover {
@@ -26,5 +29,10 @@
         text-decoration: none;
       }
     }
+  }
+  .article-content {
+    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    font-size: 15px;
+    line-height: 22px;
   }
 }
