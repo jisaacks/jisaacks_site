@@ -1,8 +1,8 @@
 .article
   .date
-    .day= article.created_at.strftime("%d")
-    = article.created_at.strftime("%b")
-    = "'#{article.created_at.strftime("%y")}"
+    .day= article.published_at.strftime("%d")
+    = article.published_at.strftime("%b")
+    = "'#{article.published_at.strftime("%y")}"
 
   %h1= link_to article.title, article_path(article)
 

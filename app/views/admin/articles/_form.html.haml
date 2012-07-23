@@ -15,5 +15,5 @@
     - @article.errors[:title].each do |error|
       = error
   %div
-    - submit_label = @article.id.nil? ? "Create" : "Update"
-    = f.submit submit_label, :class => 'btn'
+    = f.select :state, ["private", "public"]
+    = f.submit "Save", :class => 'btn btn-primary'
