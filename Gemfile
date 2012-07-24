@@ -5,8 +5,6 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
 gem 'compass'
 gem 'compass_twitter_bootstrap'
 gem 'compass-rails'
@@ -35,6 +33,11 @@ group :development do
   gem 'pry'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem 'jquery-rails'
