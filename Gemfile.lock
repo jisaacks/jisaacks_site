@@ -58,6 +58,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    friendly_id (4.0.7)
     fssm (0.2.9)
     haml (3.1.6)
     haml-rails (0.3.4)
@@ -158,6 +159,7 @@ DEPENDENCIES
   compass-rails
   compass_twitter_bootstrap
   devise
+  friendly_id (~> 4.0.1)
   haml
   haml-rails
   jquery-rails

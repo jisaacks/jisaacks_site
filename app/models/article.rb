@@ -4,6 +4,9 @@ class Article < ActiveRecord::Base
   validates :content, :presence => true
   default_scope :order => 'published_at DESC'
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   def self.published
     self.where(:state => 'public')
   end
