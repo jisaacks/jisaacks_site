@@ -109,4 +109,23 @@
       }
     }
   }
+  .recent {
+    div {
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 5px;
+      color: $lite-gray;
+    }
+    ul {
+      margin: 0;
+      li {
+        list-style: none;
+        padding: 5px;
+        border-bottom: 1px solid #f5f5f5;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }

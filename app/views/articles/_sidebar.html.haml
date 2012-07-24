@@ -5,3 +5,10 @@
     %input{:name => :q, :type => :text, :placeholder => 'Search', :value => params[:q]}>
     %button.btn 
       %span Search
+
+.recent
+  %div Recent
+  %ul
+    - Article.recent.each do |a|
+      %li= link_to a.title, article_path(a)
+  

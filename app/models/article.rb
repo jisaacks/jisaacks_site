@@ -15,4 +15,8 @@ class Article < ActiveRecord::Base
     self.state == 'public'
   end
 
+  def self.recent
+    self.published.limit(10)
+  end
+
 end
