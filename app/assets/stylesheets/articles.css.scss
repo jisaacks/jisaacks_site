@@ -95,4 +95,18 @@
   padding: 20px;
   padding-right: 0;
   float: right;
+  .article-search {
+    .input-append {
+      margin: 10px 0;
+      input[type='text']{
+        width: 161px;
+      }
+      button span {
+        background: url(search.png) no-repeat;
+        text-indent: -999px;
+        display: block;
+        width: 16px;
+      }
+    }
+  }
 }

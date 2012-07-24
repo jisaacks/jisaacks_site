@@ -1,1 +1,7 @@
 = render :partial => 'partials/se_flair'
+
+= form_for :article, :url => search_articles_path, :html => {:class => 'form-horizontal article-search', :method => :get} do |f|
+  .input-append
+    %input{:name => :q, :type => :text, :placeholder => 'Search', :value => params[:q]}>
+    %button.btn 
+      %span Search
