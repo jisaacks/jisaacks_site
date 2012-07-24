@@ -9,4 +9,8 @@ class ArticlesController < ApplicationController
     @articles = Article.published.where("content LIKE ? OR title LIKE ?","%#{q}%","%#{q}%")
   end
 
+  def show
+    @article = Article.published.find(params[:id])
+  end
+
 end
