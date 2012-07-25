@@ -40,4 +40,11 @@ class Admin::ArticlesController < AdminController
       format.html { redirect_to action: "edit" }
     end
   end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    flash[:notice] = "Deleted Article: #{@article.title}"
+    redirect_to :action => :index
+  end
 end
