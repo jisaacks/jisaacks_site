@@ -19,6 +19,7 @@ class Admin::ArticlesController < AdminController
       if @article.save
         format.html { redirect_to edit_admin_article_path(@article), notice: 'Article was successfully created.' }
       else
+        flash[:alert] = @article.errors.full_messages.to_sentence
         format.html { render action: "new" }
       end
     end

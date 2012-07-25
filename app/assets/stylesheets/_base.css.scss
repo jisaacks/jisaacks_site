@@ -1,6 +1,7 @@
 @import "compass_twitter_bootstrap";
 
 $orange: #ffb657;
+$red: #D14;
 $lite-gray: #bbb;
 $lite-grain: #fbe9d2;
 
@@ -36,13 +37,21 @@ p {
   }
 }
 
-.notice {
-  background: $orange;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: 15px;
-  border-bottom: 1px solid white;
-  color: #C60;
-  text-shadow: 1px 1px 1px #FC9;
+#flash {
+  .notice, .alert {
+    background: $orange;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid white;
+    text-shadow: 1px 1px 1px #c96;
+    margin: 0;
+  }
+  .alert {
+    background: $red;
+    text-shadow: 1px 1px 1px #c99 !important;
+  }
 }
