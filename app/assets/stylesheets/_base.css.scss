@@ -4,6 +4,11 @@ $orange: #ffb657;
 $lite-gray: #bbb;
 $lite-grain: #fbe9d2;
 
+p {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 .width {
   width: 950px;
   margin: auto;
