@@ -1,5 +1,9 @@
 class Admin::ArticlesController < AdminController
 
+  def index
+    @articles = Article.all
+  end
+
   def new
     @article = Article.new
   end
