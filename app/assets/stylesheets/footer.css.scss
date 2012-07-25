@@ -1,0 +1,24 @@
+@import "base";
+
+.footer {
+  clear: both;
+  border-top: 1px solid $lite-grain;
+  .left {
+    float: left;
+    width: 698px;
+    padding: 20px;
+    padding-left: 0;
+    .copy {
+      color: #999;
+    }
+    .mastehead {
+      color: $lite-red;
+    }
+  }
+  .right {
+    float: right;
+    width: 208px;
+    padding: 20px;
+    padding-right: 0;
+  }
+}
