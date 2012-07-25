@@ -1,6 +1,7 @@
 .header
   .width
     - if current_user
+      = link_to "Admin", admin_articles_path, :class => 'admin'
       = link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'signout'
     - else
       = link_to "Sign In", new_user_session_path, :class => 'signin'

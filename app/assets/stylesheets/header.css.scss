@@ -4,17 +4,22 @@
   &> .width {
     padding-top: 70px;
     position: relative;
-    .signout, .signin {
-      position: absolute;
-      right: 15px;
-      top: 0;
-      background: #333;
-      padding: 5px 15px;
-      border-radius: 0 0 3px 3px;
-      color: #ccc;
-      &:hover {
-        text-decoration: none;
-        color: white;
+    a {
+      &.signout, &.signin, &.admin {
+        position: absolute;
+        right: 15px;
+        top: 0;
+        background: #333;
+        padding: 5px 15px;
+        border-radius: 0 0 3px 3px;
+        color: #ccc;
+        &:hover {
+          text-decoration: none;
+          color: white;
+        }
+      }
+      &.admin {
+        right: 88px;
       }
     }
     .logo {
