@@ -1,0 +1,56 @@
+@import "base";
+
+.title {
+  float: left;
+  img {
+    border: 10px solid #f5f5f5;
+    margin: 10px 0;
+  }
+}
+
+.skill-section {
+  float: left;
+  width: 450px;
+  margin: 20px 50px;
+  .brace-label {
+    font-size: 48px;
+    margin: 65px 10px;
+    float: left;
+    color: #b4b4b4;
+  }
+  .brace {
+    font-size: 100px;
+    float: left;
+    padding: 60px 0;
+  }
+  ul.skills {
+    float: left;
+    li.skillset {
+      width: 220px;
+      position: relative;
+      clear :both;
+      list-style: none;
+      .dots {
+        position: absolute;
+        width: 100%;
+        top: 13px;
+        border-bottom: 2px dotted #bbb;
+      }
+      .skill {
+        position: absolute;
+        left: 0;
+        background: white;
+        padding: 2px;
+        font-weight: bold;
+        color: #445566;
+      }
+      .years {
+        position: absolute;
+        right: 0;
+        background: white;
+        padding: 2px;
+        color: $lite-red;
+      }
+    }
+  }
+}

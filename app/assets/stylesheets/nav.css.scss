@@ -2,7 +2,7 @@
 
 .nav {
   background: url("grain.png");
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   border-top: 1px solid white;
   border-bottom: 1px solid $lite-grain;
   text-align: center;

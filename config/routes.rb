@@ -7,6 +7,8 @@ Rblog::Application.routes.draw do
     resources :articles
   end
 
+  get "resume" => "resumes#index"
+
   resources :articles, :except => :index do
     collection do
       get :search
