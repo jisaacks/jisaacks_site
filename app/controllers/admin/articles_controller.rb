@@ -34,7 +34,9 @@ class Admin::ArticlesController < AdminController
      if params[:article][:state] == 'public'
       params[:article][:published_at] = Time.now if @article.published_at.nil?
     end
-    @article.update_attributes(params[:article])
+    if @article.update_attributes(params[:article])
+      flash[:notice] = "Updated Article: #{@article.title}"
+    end
 
     respond_to do |format|
       format.html { redirect_to action: "edit" }
