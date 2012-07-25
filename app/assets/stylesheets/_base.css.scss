@@ -35,3 +35,14 @@ p {
     vertical-align: baseline;
   }
 }
+
+.notice {
+  background: $orange;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  border-bottom: 1px solid white;
+  color: #C60;
+  text-shadow: 1px 1px 1px #FC9;
+}

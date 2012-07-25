@@ -6,6 +6,8 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    - if flash[:notice].present?
+      .notice= flash[:notice]
     = render :partial => 'layouts/header'
     .width
       = yield
