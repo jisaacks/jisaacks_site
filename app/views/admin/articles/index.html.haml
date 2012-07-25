@@ -7,6 +7,6 @@
       %th State
   %tbody
     - @articles.each do |a|
-      %tr
+      %tr{:class => a.state}
         %td= link_to a.title, edit_admin_article_path(a)
         %td= link_to a.state, edit_admin_article_path(a)
