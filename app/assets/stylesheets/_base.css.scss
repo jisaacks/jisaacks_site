@@ -1,7 +1,7 @@
 @import "compass_twitter_bootstrap";
 
 $orange: #ffb657;
-$red: #D14;
+$lite-red: #D14;
 $lite-gray: #bbb;
 $lite-grain: #fbe9d2;
 
@@ -51,7 +51,7 @@ p {
     margin: 0;
   }
   .alert {
-    background: $red;
+    background: $lite-red;
     text-shadow: 1px 1px 1px #c99 !important;
   }
 }
