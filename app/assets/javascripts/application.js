@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require jquery.snippet.min.js
 //= require_tree .
-//= require bootstrap-all
+//= require bootstrap
