@@ -1,5 +1,28 @@
 @import "base";
 
+.info {
+  background: -webkit-linear-gradient(left, #ffffff 50%,#ccc 100%);
+  background: #eee;
+  color: #999;
+  text-shadow: 1px 1px 1px #fff;
+  border: 1px dotted #ccc;
+  border-top: none;
+  padding: 4px;
+  overflow: hidden;
+  text-align: right;
+  border-radius: 0 0 4px 4px;
+  .status {
+    float: left;
+    //display: inline;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  button {
+    float: right;
+    //margin-right: 10px;
+  }
+}
+
 .title {
   float: left;
   img {
