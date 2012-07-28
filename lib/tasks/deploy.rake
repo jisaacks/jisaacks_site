@@ -15,15 +15,25 @@ namespace :deploy do
 
   desc "Deploy to heroku"
   task :heroku do
-    name = `whoami`
+    # Make sure branch is clean
     git_status=`git status 2> /dev/null`
-    if git_status =~ /working directory clean/
-      puts green("Preparing to deploy")
-    else
-      print red("WARNING: ")
-      puts yellow("You have uncommited changes.")
-      puts yellow("You cannot deploy with uncommited changes!")
+    unless git_status =~ /working directory clean/
+      raise red("You have uncommited changes.")
     end
+    # Check for heroku branch
+    unless `git branch` =~ /heroku/
+      raise red("heroku branch not found")
+    end
+
+    puts blue("Preparing to deploy master to heroku")
+    `git checkout heroku`
+    `git merge master`
+    `RAILS_ENV=production rake assets:precompile`
+    `git add .`
+    `git commit -m 'precompile assets'`
+    `git push heroku heroku:master`
+    `git checkout master`
+    puts green("Success!")
   end
 
 end
