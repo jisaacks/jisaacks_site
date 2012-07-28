@@ -21,14 +21,20 @@ namespace :deploy do
       raise red("You have uncommited changes.")
     end
     # Check for heroku branch
-    unless `git branch` =~ /heroku/
+    branches = `git branch`
+    unless branches =~ /heroku/
       raise red("heroku branch not found")
+    end
+    # Get current branch
+    current_branch = branches.match(/\* ([^\n]*)/)[1]
+    unless current_branch == "master"
+      raise red("You must be on master branch to deploy")
     end
 
     puts blue("Preparing to deploy master to heroku")
     `git checkout heroku`
     `git merge master`
-    `RAILS_ENV=production rake assets:precompile`
+    `rake assets:precompile`
     `git add .`
     `git commit -m 'precompile assets'`
     `git push heroku heroku:master`
