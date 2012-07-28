@@ -22,7 +22,7 @@ namespace :deploy do
     end
     # Check for heroku branch
     branches = `git branch`
-    unless branches =~ /heroku/
+    unless branches =~ / heroku\n/
       raise red("heroku branch not found")
     end
     # Get current branch
