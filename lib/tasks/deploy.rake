@@ -18,9 +18,11 @@ namespace :deploy do
     name = `whoami`
     git_status=`git status 2> /dev/null`
     if git_status =~ /working directory clean/
-      puts "Preparing to deploy"
+      puts green("Preparing to deploy")
     else
-      puts red("You have uncommited changes.")
+      print red("WARNING: ")
+      puts yellow("You have uncommited changes.")
+      puts yellow("You cannot deploy with uncommited changes!")
     end
   end
 
