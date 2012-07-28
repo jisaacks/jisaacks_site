@@ -164,5 +164,38 @@
 .education {
   clear: both;
   padding-top: 20px;
-
+  margin-bottom: 120px;
+  .school {
+    width: 410px;
+    padding: 10px 32px;
+    float: left;
+    &:last-child {
+      border-left: 1px dotted $lite-grain;
+    }
+    .school-name {
+      font-size: 18px;
+      color: #456;
+    }
+    .location {
+      float: left;
+      font-size: 14px;
+      font-style: italic;
+    }
+    .timeframe {
+      float: right;
+      color: $orange;
+    }
+    .study {
+      clear: both;
+      padding-top: 10px;
+      font-size: 16px;
+      color: $lite-red;
+      &:before {
+        content: 'Course of study: ';
+        font-size: 12px;
+        color: #ccc;
+        margin-right: 10px;
+      }
+    }
+  }
 }
