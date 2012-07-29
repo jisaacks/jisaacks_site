@@ -11,6 +11,23 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.published.find(params[:id])
+    @comments = @article.comments
+    @comment = Comment.new
+  end
+
+  def comment
+    @article = Article.find(params[:id])
+    @comment = @article.comments.new(params[:comment])
+
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to article_path(@article), notice: 'Comment submission successful.' }
+      else
+        flash[:alert] = @comment.errors.full_messages.to_sentence
+        format.html { render :action => 'show' }
+      end
+    end
+
   end
 
 end

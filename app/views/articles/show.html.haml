@@ -1,5 +1,8 @@
 .articles
   = render :partial => 'article', :locals => {article: @article}
+  .comments
+    = render :partial => 'comments', :locals => {comments: @comments}
+    = render :partial => 'comment', :locals => {article: @article, comment: @comment}
 
 .sidebar
   = render :partial => 'sidebar'

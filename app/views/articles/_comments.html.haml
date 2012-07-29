@@ -1,0 +1,15 @@
+- if comments.present?
+  %h3 
+    = comments.size
+    Comments
+  - comments.each do |comment|
+    .comment
+      - if comment.website.present?
+        - website = comment.website.downcase[0..3] == 'http' ? comment.website : "http://#{comment.website}"
+        - name = link_to comment.name, website
+      - else
+        - name = comment.name
+      .icon= image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(comment.email)}?s=40"
+      .name= name
+      .time= comment.created_at
+      .text= comment.comment
