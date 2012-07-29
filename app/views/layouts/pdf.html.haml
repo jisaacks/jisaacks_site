@@ -1,0 +1,7 @@
+!!!
+%html
+  %head
+    / = stylesheet_link_tag "http://jisaacks.herokuapp.com/assets/application-13de112d40006991df294babeefdaf40.css", :media => "all"
+    = render :partial => 'resumes/pdf_css.html.haml'
+  %body
+    = yield
