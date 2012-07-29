@@ -6,7 +6,7 @@
     .comment
       - if comment.website.present?
         - website = comment.website.downcase[0..3] == 'http' ? comment.website : "http://#{comment.website}"
-        - name = link_to comment.name, website
+        - name = link_to comment.name, website, :rel => 'No Follow', :target => '_blank'
       - else
         - name = comment.name
       .icon= image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(comment.email)}?s=40"
