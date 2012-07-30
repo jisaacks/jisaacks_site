@@ -2,7 +2,9 @@
   .comments
     %h3 
       Reply to
-      = @reply_to.name
+      %em= @reply_to.name
+      on
+      = link_to @reply_to.article.title, article_path(@reply_to.article)
     = form_for @reply, :url => create_reply_comment_path(@reply_to) do |f|
       %div
         = f.label :name
