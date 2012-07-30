@@ -10,7 +10,10 @@ class CommentsController < ApplicationController
     @reply = @reply_to.comments.new(params[:comment])
 
     respond_to do |format|
-      if @reply.save
+      if @reply.spam?
+        flash[:alert] = "This article looks like spam. <br><small>..Not spam? Email me and let me know.</small>".html_safe
+        format.html { render :action => 'reply' }
+      elsif @reply.save
         format.html { redirect_to article_path(@reply_to.article), notice: 'Reply submission successful.' }
       else
         flash[:alert] = @reply.errors.full_messages.to_sentence

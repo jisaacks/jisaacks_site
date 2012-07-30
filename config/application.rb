@@ -59,5 +59,8 @@ module Rblog
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.rakismet.key = '6975a70c38af'
+    config.rakismet.url = 'http://jisaacks.herokuapp.com/'
   end
 end

@@ -1,5 +1,7 @@
 class Comment < ActiveRecord::Base
   include Jisaacks::Commentable
+  include Rakismet::Model
+  rakismet_attrs :author => :name, :author_email => :email, :author_url => :website
   belongs_to :commentable, :polymorphic => true
   has_many :comments, :as => :commentable
   attr_accessible :comment, :email, :name, :website

@@ -20,7 +20,10 @@ class ArticlesController < ApplicationController
     @comment = @article.comments.new(params[:comment])
 
     respond_to do |format|
-      if @comment.save
+      if @comment.spam?
+        flash[:alert] = "This article looks like spam. <br><small>..Not spam? Email me and let me know.</small>".html_safe
+        format.html { render :action => 'show' }
+      elsif @comment.save
         format.html { redirect_to article_path(@article), notice: 'Comment submission successful.' }
       else
         flash[:alert] = @comment.errors.full_messages.to_sentence
