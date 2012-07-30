@@ -1,16 +1,15 @@
-%h3 Leave A Comment
-= form_for comment, :url => comment_article_path(article) do |f|
-  %div
-    = f.label :name
-    = f.text_field :name
-  %div
-    = f.label :email
-    = f.text_field :email
-  %div
-    = f.label :website
-    = f.text_field :website
-  %div
-    = f.label :comment
-    = f.text_area :comment, :rows => 10
-  %div
-    = f.submit "Submit Comment", :class => 'btn'
+.comment
+  - if comment.website.present?
+    - website = comment.website.downcase[0..3] == 'http' ? comment.website : "http://#{comment.website}"
+    - name = link_to comment.name, website, :rel => 'No Follow', :target => '_blank'
+  - else
+    - name = comment.name
+  .icon= image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(comment.email)}?s=40"
+  .name= name
+  .time= comment.created_at
+  .text= comment.comment
+  .reply= link_to "Reply", reply_comment_path(comment), :class => 'btn btn-mini'
+  - if comment.comments.present?
+    .comments
+      - comment.comments.each do |reply|
+        = render :partial => 'comment', :locals => {comment: reply}

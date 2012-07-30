@@ -9,12 +9,18 @@ Rblog::Application.routes.draw do
 
   get "resume" => "resumes#index"
 
-  resources :articles, :except => :index do
+  resources :articles, :except => :index, :shallow => true do
     collection do
       get :search
     end
     member do
       post :comment
+    end
+    resources :comments, :only => [] do
+      member do
+        get :reply
+        post :create_reply
+      end
     end
   end
 
