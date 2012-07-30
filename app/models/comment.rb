@@ -1,4 +1,5 @@
 class Comment < ActiveRecord::Base
+  include Jisaacks::Commentable
   belongs_to :commentable, :polymorphic => true
   has_many :comments, :as => :commentable
   attr_accessible :comment, :email, :name, :website

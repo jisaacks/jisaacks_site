@@ -1,4 +1,5 @@
 class Article < ActiveRecord::Base
+  include Jisaacks::Commentable
   attr_accessible :content, :title, :state, :published_at
   validates :title, :presence => true
   validates :content, :presence => true

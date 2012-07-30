@@ -1,6 +1,6 @@
 - if comments.present?
   %h3 
-    = comments.size
+    = article.comment_count
     Comments
   - comments.each do |comment|
     = render :partial => 'comment', :locals => {comment: comment}
