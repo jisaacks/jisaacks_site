@@ -40,6 +40,15 @@
       font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
       font-size: 15px;
       line-height: 22px;
+      .alignleft {
+        float: left;
+      }
+      .alignnone {
+        display: block;
+      }
+      .alignright {
+        float: right;
+      }
       code {
         &.inline {
           font-family: Courier, monospace;

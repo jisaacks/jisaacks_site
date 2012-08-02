@@ -31,9 +31,11 @@
       color: #999;
       line-height: 8px;
     }
-    .text {
+    pre.text {
       clear: both;
       padding: 5px;
+      background: none;
+      border: none;
     }
     .comment {
       margin-left: 40px;

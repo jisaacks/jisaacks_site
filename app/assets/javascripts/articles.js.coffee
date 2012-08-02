@@ -9,4 +9,4 @@ hilite = (lang) ->
     showNum: false
 
 $ ->
-  hilite lang for lang in ['ruby', 'php', 'css', 'javascript', 'sql']
+  hilite lang for lang in ['ruby', 'php', 'css', 'javascript', 'sql','html','shell','plain']
