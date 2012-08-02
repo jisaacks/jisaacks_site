@@ -1,0 +1,18 @@
+@import "base";
+
+.signin-container {
+  width: 220px;
+  background: #f5f5f5;
+  margin: 50px auto;
+  padding: 15px;
+  border: 5px solid white;
+  border-radius: 12px;
+  box-shadow: #666 0px 0px 10px;
+  label {
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  .submit {
+    text-align: right;
+  }
+}
