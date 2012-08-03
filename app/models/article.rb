@@ -22,7 +22,7 @@ class Article < ActiveRecord::Base
   end
 
   def should_generate_new_friendly_id?
-    new_record?
+    !self.slug?
   end
 
 end
