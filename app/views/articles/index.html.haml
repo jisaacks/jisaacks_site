@@ -2,5 +2,8 @@
   - @articles.each do |a|
     = render :partial => 'article', :locals => {article: a}
 
+  .pages
+    = will_paginate @articles
+
 .sidebar
   = render :partial => 'sidebar'
