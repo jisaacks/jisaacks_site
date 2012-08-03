@@ -179,6 +179,20 @@
   }
 }
 
+.search_results {
+  ul {
+    margin: 10px;
+    li {
+      list-style: none;
+      border-bottom: 1px dotted #e3e3e3;
+      padding: 10px 0;
+      small {
+        color: #999;
+      }
+    }
+  }
+}
+
 .private {
   a {
     color: $lite-red;

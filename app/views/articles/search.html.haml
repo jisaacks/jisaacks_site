@@ -1,10 +1,16 @@
 .articles
-  %h1 Search
-  - if @articles.present?
-    - @articles.each do |a|
-      %div= link_to a.title, article_path(a)
-  - else
-    %div No articles matched your search.
+  .search_results
+    %h1 Search Results
+    - if @articles.present?
+      %ul
+        - @articles.each do |a|
+          %li
+            %h4= link_to a.title, article_path(a)
+            %small
+              = a.comment_count
+              comments
+    - else
+      %div No articles matched your search.
 
 .sidebar
   = render :partial => 'sidebar'
