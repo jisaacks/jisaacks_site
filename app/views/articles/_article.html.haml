@@ -4,6 +4,10 @@
     = article.published_at.strftime("%b")
     = "'#{article.published_at.strftime("%y")}"
 
+  .comment_count
+    = article.comment_count
+    Comments
+
   %h1= link_to article.title, article_path(article)
 
   .article-content= article.content.html_safe

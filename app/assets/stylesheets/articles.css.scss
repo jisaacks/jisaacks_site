@@ -14,8 +14,11 @@
     margin-bottom: 50px;
     .date {
       float: left;
-      margin: 10px;
-      margin-bottom: 0;
+      margin: 0px;
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+      text-shadow: 1px 1px 1px white;
       .day {
         color: $orange;
         font-size: 32px;
@@ -25,9 +28,17 @@
       color: $lite-gray;
       font-size: 12px;
     }
+    .comment_count {
+      float: right;
+      width: 628px;
+      line-height: 10px;
+      margin-top: 8px;
+    }
     h1 {
-      line-height: 50px;
+      line-height: 35px;
       margin-bottom: 10px;
+      width: 630px;
+      float: right;
       a {
         color: black;
         &:hover {
@@ -40,6 +51,7 @@
       font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
       font-size: 15px;
       line-height: 22px;
+      clear: both;
       .alignleft {
         float: left;
       }
