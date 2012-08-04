@@ -3,7 +3,7 @@
     = render :partial => 'article', :locals => {article: a}
 
   .pages
-    = will_paginate @articles
+    = will_paginate @articles, :inner_window => 2, :outer_window => 0
 
 .sidebar
   = render :partial => 'sidebar'
