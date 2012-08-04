@@ -135,6 +135,12 @@
           background: none;
         }
       }
+      &.gap {
+        color: #999;
+        &:hover {
+          background: none;
+        }
+      }
       &:hover {
         background-color: #FEF7EF
       }
