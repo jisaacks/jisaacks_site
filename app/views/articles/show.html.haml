@@ -1,7 +1,7 @@
 - @doc_title = @article.title
 .articles
   = render :partial => 'article', :locals => {article: @article}
-  .comments
+  .comments#comments
     = render :partial => 'comments', :locals => {article: @article, comments: @comments}
     = render :partial => 'new_comment', :locals => {article: @article, comment: @comment}
 

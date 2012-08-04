@@ -4,9 +4,7 @@
     = article.published_at.strftime("%b")
     = "'#{article.published_at.strftime("%y")}"
 
-  .comment_count
-    = article.comment_count
-    Comments
+  = link_to "#{article.comment_count} Comments", article_path(article, :anchor => 'comments'), :class => 'comment_count'
 
   %h1= link_to article.title, article_path(article)
 
