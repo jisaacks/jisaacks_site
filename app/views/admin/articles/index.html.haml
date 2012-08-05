@@ -1,12 +1,14 @@
-%h1 All Articles
-= link_to "New Article", new_admin_article_path, :class => 'btn'
-%table
-  %thead
-    %tr
-      %th Title
-      %th State
-  %tbody
-    - @articles.each do |a|
-      %tr{:class => a.state}
-        %td= link_to a.title, edit_admin_article_path(a)
-        %td= link_to a.state, edit_admin_article_path(a)
+#admin
+  .articles
+    %h1 All Articles
+    %table
+      %thead
+        %tr
+          %th Title
+          %th State
+      %tbody
+        - @articles.each do |a|
+          %tr{:class => a.state}
+            %td= link_to a.title, edit_admin_article_path(a)
+            %td= link_to a.state, edit_admin_article_path(a)
+  .right= render :partial => 'admin/sidebar'

@@ -4,7 +4,8 @@ Rblog::Application.routes.draw do
   root :to => 'articles#index'
 
   namespace :admin do
-    resources :articles
+    resources :articles, :except => :show
+    resources :comments, :only => [:index, :edit, :update, :destroy]
   end
 
   get "resume" => "resumes#index"

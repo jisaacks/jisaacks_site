@@ -1,0 +1,43 @@
+@import "base";
+
+#admin {
+  h1 {
+    margin: 20px 0;
+  }
+  table {
+    width: 100%;
+    tr {
+      border-bottom: 1px solid $orange;
+      th {
+        text-align: left;
+      }
+      td {
+        padding: 5px 0;
+      }
+    }
+  }
+  form {
+    width: 100%;
+    input[type="text"] {
+      width: 100%;
+    }
+    textarea {
+      width: 100%;
+    }
+  }
+  .sidebar {
+    margin-top: 20px;
+    h2 {
+      padding-left: 10px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        padding: 10px;
+        border-bottom: 1px dotted $lite-grain;
+      }
+    }
+  }
+}

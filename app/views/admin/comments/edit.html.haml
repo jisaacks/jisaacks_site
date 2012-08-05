@@ -1,0 +1,21 @@
+#admin
+  .articles
+    %h1 Edit Comment
+    = form_for @comment, :url => admin_comment_path(@comment) do |f|
+      %div
+        %label Article
+        %h3= @comment.article.title
+      %div
+        = f.label "name"
+        = f.text_field :name
+      %div
+        = f.label "website"
+        = f.text_field :website
+      %div
+        = f.label "comment"
+        = f.text_area :comment
+      %div
+        - if @comment.id?
+          = link_to "Delete", admin_comment_path(@comment), :method => :delete, :class => 'btn btn-danger', :confirm => "Really Delete?"
+        = f.submit "Save", :class => 'btn btn-primary'
+  .right= render :partial => 'admin/sidebar'
