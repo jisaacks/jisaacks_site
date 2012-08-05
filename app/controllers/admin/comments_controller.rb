@@ -1,7 +1,7 @@
 class Admin::CommentsController < AdminController
 
   def index
-    @comments = Comment.all
+    @comments = Comment.order('comments.created_at DESC').all
   end
 
   def edit
