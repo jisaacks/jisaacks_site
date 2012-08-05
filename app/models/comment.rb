@@ -8,6 +8,7 @@ class Comment < ActiveRecord::Base
   validates :name,    :presence => true
   validates :email,   :presence => true
   validates :comment, :presence => true
+  after_create :notify
 
   def article
     if self.commentable_type == 'Article'
@@ -15,5 +16,9 @@ class Comment < ActiveRecord::Base
     else
       self.commentable.article
     end
+  end
+
+  def notify
+    Mailer.new_comment(self).deliver
   end
 end
