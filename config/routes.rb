@@ -6,6 +6,7 @@ Rblog::Application.routes.draw do
   namespace :admin do
     resources :articles, :except => :show
     resources :comments, :only => [:index, :edit, :update, :destroy]
+    resources :attachments, :except => [:show, :edit, :update]
   end
 
   get "resume" => "resumes#index"
@@ -24,6 +25,8 @@ Rblog::Application.routes.draw do
       end
     end
   end
+
+  resources :attachments, :only => :show
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

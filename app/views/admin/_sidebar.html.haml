@@ -2,5 +2,9 @@
   %h2 Admin
   %ul
     %li= link_to "Articles", admin_articles_path, :class => 'btn btn-inverse'
-    %li= link_to "New Article", new_admin_article_path, :class => 'btn btn-inverse'
+    %li= link_to "New Article", new_admin_article_path, :class => 'btn btn-success'
+    %br
     %li= link_to "Comments", admin_comments_path, :class => 'btn btn-inverse'
+    %br
+    %li= link_to "Images", admin_attachments_path, :class => 'btn btn-inverse'
+    %li= link_to "New Image", new_admin_attachment_path, :class => 'btn btn-success'

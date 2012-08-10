@@ -1,0 +1,8 @@
+#admin
+  .articles
+    %h1 File Upload
+    = form_for :attachment, :url => admin_attachments_path, :html => {:multipart => true, :class => 'form-inline'} do |f|
+      = f.label :file
+      = f.file_field :file
+      = f.submit "Upload", :class => 'btn'
+  .right= render :partial => 'admin/sidebar'
