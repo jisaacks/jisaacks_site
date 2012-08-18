@@ -24,6 +24,8 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'rails_autolink'
 
+gem 'rack-rewrite', '~> 1.2.1'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.published.find(params[:id])
+    redirect_to(url_for(@article), :status => 301) if params[:slug].present?
     @comments = @article.comments
     @comment = Comment.new
   end

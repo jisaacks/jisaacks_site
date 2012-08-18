@@ -62,5 +62,10 @@ module Rblog
 
     config.rakismet.key = '6975a70c38af'
     config.rakismet.url = 'http://jisaacks.herokuapp.com/'
+
+    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+      r301 %r{/(.*)}, 'http://jisaacks.com/$1', :host => "programming-perils.com"
+    end
+
   end
 end

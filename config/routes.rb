@@ -11,7 +11,10 @@ Rblog::Application.routes.draw do
 
   get "resume" => "resumes#index"
 
-  resources :articles, :except => :index, :shallow => true do
+  get ":id/:slug" => 'articles#show', :as => :article
+  get ":id"       => 'articles#show', :as => :article
+
+  resources :articles, :except => [:index,:show], :shallow => true do
     collection do
       get :search
     end
