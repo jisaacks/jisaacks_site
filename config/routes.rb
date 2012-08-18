@@ -11,10 +11,7 @@ Rblog::Application.routes.draw do
 
   get "resume" => "resumes#index"
 
-  get ":id/:slug" => 'articles#show', :as => :article
-  get ":id"       => 'articles#show', :as => :article
-
-  resources :articles, :except => [:index,:show], :shallow => true do
+  resources :articles, :only => [], :shallow => true do
     collection do
       get :search
     end
@@ -30,6 +27,9 @@ Rblog::Application.routes.draw do
   end
 
   resources :attachments, :only => :show
+
+  get ":id/:slug" => 'articles#show', :as => :article
+  get ":id"       => 'articles#show', :as => :article
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
