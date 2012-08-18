@@ -12,9 +12,6 @@ Rblog::Application.routes.draw do
   get "resume" => "resumes#index"
 
   resources :articles, :only => [], :shallow => true do
-    collection do
-      get :search
-    end
     member do
       post :comment
     end
@@ -27,6 +24,8 @@ Rblog::Application.routes.draw do
   end
 
   resources :attachments, :only => :show
+
+  get "search"    => 'articles#search', :as => :search_articles
 
   get ":id/:slug" => 'articles#show', :as => :article
   get ":id"       => 'articles#show', :as => :article
