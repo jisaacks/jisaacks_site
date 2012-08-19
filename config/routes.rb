@@ -6,7 +6,7 @@ Rblog::Application.routes.draw do
   namespace :admin do
     resources :articles, :except => :show
     resources :comments, :only => [:index, :edit, :update, :destroy]
-    resources :attachments, :except => [:show, :edit, :update]
+    resources :photos, :except => [:show, :edit, :update]
   end
 
   get "resume" => "resumes#index"
@@ -22,8 +22,6 @@ Rblog::Application.routes.draw do
       end
     end
   end
-
-  resources :attachments, :only => :show
 
   get "search"    => 'articles#search', :as => :search_articles
 

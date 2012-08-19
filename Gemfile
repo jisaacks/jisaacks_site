@@ -26,6 +26,8 @@ gem 'rails_autolink'
 
 gem 'rack-rewrite', '~> 1.2.1'
 
+gem "imgur", "~> 0.2.0"
+
 
 # Gems used only for assets and not required
 # in production environments by default.

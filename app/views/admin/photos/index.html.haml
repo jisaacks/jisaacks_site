@@ -1,0 +1,16 @@
+#admin
+  .articles
+    %h1 Photos
+    %table
+      %thead
+        %tr
+          %th Thumbnail
+          %th URL
+          %th
+      %tbody
+        - @photos.each do |photo|
+          %tr
+            %td= image_tag photo.info[:small_thumbnail], :width => 50
+            %td= photo.info[:original_image]
+            %td= link_to "Delete", admin_photo_path(photo), :method => :delete, :class => 'btn btn-danger', :confirm => "You sure?"
+  .right= render :partial => 'admin/sidebar'

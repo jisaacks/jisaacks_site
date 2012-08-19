@@ -60,7 +60,7 @@ module Rblog
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.rakismet.key = '6975a70c38af'
+    config.rakismet.key = ENV['RAKISMET_KEY']
     config.rakismet.url = 'http://jisaacks.herokuapp.com/'
 
     config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do

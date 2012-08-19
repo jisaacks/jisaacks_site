@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120807024049) do
+ActiveRecord::Schema.define(:version => 20120819041731) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -25,14 +25,6 @@ ActiveRecord::Schema.define(:version => 20120807024049) do
 
   add_index "articles", ["slug"], :name => "index_articles_on_slug", :unique => true
 
-  create_table "attachments", :force => true do |t|
-    t.binary   "data"
-    t.string   "name"
-    t.string   "format"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "comments", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -42,6 +34,12 @@ ActiveRecord::Schema.define(:version => 20120807024049) do
     t.datetime "updated_at",       :null => false
     t.integer  "commentable_id"
     t.string   "commentable_type"
+  end
+
+  create_table "photos", :force => true do |t|
+    t.text     "info"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
