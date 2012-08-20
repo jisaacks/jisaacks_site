@@ -12,3 +12,12 @@
     - if @article.id?
       = link_to "Delete", admin_article_path(@article), :method => :delete, :class => 'btn btn-danger', :confirm => "Really Delete?"
     = f.submit "Save", :class => 'btn btn-primary'
+
+.article-preview.article
+  %br
+  %br
+  %br
+  %h3
+    %center Preview
+  %br
+  .article-content
