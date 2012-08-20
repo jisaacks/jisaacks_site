@@ -67,5 +67,7 @@ module Rblog
       r301 %r{/(.*)}, 'http://jisaacks.com/$1', :host => "programming-perils.com"
     end
 
+    config.assets.initialize_on_precompile = false
+
   end
 end
