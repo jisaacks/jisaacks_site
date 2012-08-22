@@ -153,10 +153,10 @@
 }
 .sidebar {
   width: 208px;
-  padding: 20px;
-  padding-right: 0;
+  padding: 10px 0 20px 0;
   float: right;
   .article-search {
+    margin-bottom: 10px;
     .input-append {
       margin: 10px 0;
       input[type='text']{
