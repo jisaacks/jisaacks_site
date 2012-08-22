@@ -73,7 +73,9 @@ small {
 .project-euler {
   margin: 10px 0 20px;
   border: 1px solid #ccc;
-  .project-euler-image {
+  a{
+    display: block;
+    text-indent: -9999px;
     width: 150px;
     height: 56px;
     background-image: url('http://projecteuler.net/profile/jisaacks.png');
