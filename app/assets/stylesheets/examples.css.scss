@@ -1,0 +1,38 @@
+// For this article:
+// use-image-sprites-for-icons-without-nested-markup
+a.pseudo-before-example-1 {
+  height:50px; 
+  display: inline-block; 
+  padding-right: 10px; 
+  color: #5b5041; 
+  border: 1px solid #CCC;
+  line-height: 50px;
+  text-decoration: none;
+  margin: 25px;
+  &:before {
+    height: 50px; 
+    width: 50px; 
+    display: inline-block;
+    content: 'Click Me';
+    text-indent: -9999px;
+    border: 1px solid red;
+  }
+}
+a.pseudo-before-example-2 {
+  height:50px; 
+  display: inline-block; 
+  padding-right: 10px; 
+  color: #5b5041 !important; 
+  border: 1px solid #CCC;
+  line-height: 50px;
+  text-decoration: none !important;
+  margin: 25px;
+  &:before {
+    background: url('icon-sprite.png');
+    height: 50px; 
+    width: 50px; 
+    display: inline-block;
+    content: 'Click Me';
+    text-indent: -9999px;
+  }
+}
