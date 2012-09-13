@@ -1,8 +1,8 @@
 .article
   .date
     .day= article.published_at.strftime("%d")
-    = article.published_at.strftime("%b")
-    = "'#{article.published_at.strftime("%y")}"
+    .month= article.published_at.strftime("%b")
+    .year= article.published_at.strftime("%Y")
 
   = link_to "#{article.comment_count} Comments", article_path(article, :anchor => 'comments'), :class => 'comment_count'
 

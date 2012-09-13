@@ -12,32 +12,55 @@
   float: left;
   .article {
     margin-bottom: 50px;
+    position: relative;
     .date {
-      float: left;
-      margin: 0px;
-      background: #f9f9f9;
-      padding: 10px;
-      border-radius: 4px;
-      text-shadow: 1px 1px 1px white;
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 40px;
+      border: 4px double #ddd;
+      font-size: 20px;
+      color: #999;
+      line-height: 60px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+      background: whiteSmoke;
+      position: absolute;
+      right: 102%;
+      top: 10px;
+      font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+
       .day {
-        color: $orange;
-        font-size: 32px;
-        font-weight: bold;
-        margin-bottom: 2px;
+        font-size: 24px; 
+        top: 0px;
+        position: absolute;
+        line-height: 20px;
+        width: 60px;
       }
-      color: $lite-gray;
-      font-size: 12px;
+      .month {
+        text-transform: uppercase;
+        color: $orange;
+      }
+      .year {
+        font-size: 16px;
+        bottom: 4px;
+        position: absolute;
+        line-height: 20px;
+        width: 60px;
+      }
     }
+
     .comment_count {
       float: right;
-      width: 628px;
+      width: 100%;
       line-height: 10px;
       margin-top: 8px;
     }
     h1 {
       line-height: 35px;
       margin-bottom: 10px;
-      width: 630px;
+      width: 100%;
       float: right;
       a {
         color: black;
