@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
     @comment = @article.comments.new(params[:comment])
 
     respond_to do |format|
-      if @comment.spam?
+      if @comment.spam? || params[:phone].present? #phone is the honeypot
         flash[:alert] = "This article looks like spam. <br><small>..Not spam? Email me and let me know.</small>".html_safe
         format.html { render :action => 'show' }
       elsif @comment.save
