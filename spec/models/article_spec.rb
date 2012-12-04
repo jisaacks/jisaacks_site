@@ -6,6 +6,6 @@ describe Article do
   end
 
   it "can be saved successfully" do
-    Article.create.should be_persisted
+    Article.create(title: 'new article', content: 'read this').should be_persisted
   end
 end
