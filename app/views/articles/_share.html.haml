@@ -1,0 +1,15 @@
+.share
+  %span.st_twitter_hcount{displayText: 'Tweet'}
+  %span.st_googleplus_hcount{displayText: 'Google +'}
+  %span.st_facebook_hcount{displayText: 'Facebook'}
+  %span.st_linkedin_hcount{displayText: 'LinkedIn'}
+
+- content_for :head do
+  = javascript_include_tag "http://w.sharethis.com/button/buttons.js"
+  :javascript
+    stLight.options({
+      publisher: "ur-f83d9d3d-562c-c686-85c-459d42c03a79",
+      doNotHash: true,
+      doNotCopy: true,
+      hashAddressBar: false
+    });
