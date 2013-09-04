@@ -6,7 +6,7 @@
   border-top: 1px solid white;
   border-bottom: 1px solid $lite-grain;
   text-align: center;
-  a {
+  .a {
     line-height: 50px;
     margin: 0 10px;
     color: #5b5041;
@@ -38,12 +38,16 @@
       }
     }
     &.install-me {
+      cursor: default;
       &:before {
         background-position: 1px 0px;
       }
       &:hover, &.selected {
         &:before {
           background-position: 1px -50px;
+        }
+        .drop-down {
+          display: block;
         }
       }
     }
@@ -87,5 +91,49 @@
         }
       }
     }
+  }
+}
+
+.drop-down {
+  position: absolute;
+  display: none;
+  z-index: 999;
+  top: 45px;
+  left: 0px;
+  background: #333;
+  padding: 5px 15px;
+  border-radius: 3px;
+  width: 112px;
+  font-weight: normal;
+  ul {
+    list-style: none;
+    margin: 0;
+    li {
+      line-height: 20px;
+      a {
+        color: #ccc;
+        text-shadow: none;
+        &:hover {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+    border-width: 10px;
+    left: 50%;
+    margin-left: -10px;
   }
 }

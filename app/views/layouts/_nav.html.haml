@@ -1,8 +1,19 @@
 .nav
   .width
-    = nav_link "Read Me"   , root_path                                , :class => 'read-me'    , :controller => 'articles'
-    = nav_link "Install Me", "https://rubygems.org/profiles/jisaacks" , :class => 'install-me'
-    = nav_link "Follow Me" , "https://twitter.com/jisaacks"           , :class => 'follow-me'
-    = nav_link "Fork Me"   , "https://github.com/jisaacks"            , :class => 'fork-me'
-    = nav_link "Contact Me", "mailto:jd@jisaacks.com"                 , :class => 'contact-me'
-    = nav_link "Hire Me"   , resume_path                              , :class => 'hire-me'    , :controller => 'resumes'
+    = nav_link "Read Me"   , root_path                                , :class => 'a read-me'    , :controller => 'articles'
+    = nav_link "Follow Me" , "https://twitter.com/jisaacks"           , :class => 'a follow-me'
+    = nav_link "Fork Me"   , "https://github.com/jisaacks"            , :class => 'a fork-me'
+    = nav_link "Contact Me", "mailto:jd@jisaacks.com"                 , :class => 'a contact-me'
+    .a.install-me 
+      Install Me
+      .drop-down
+        %ul
+          %li
+            %a{href: 'https://sublime.wbond.net/browse/authors/jisaacks'} Sublime Packages
+          %li
+            %a{href: 'https://npmjs.org/~jisaacks'} Node.js Modules
+          %li
+            %a{href: 'https://rubygems.org/profiles/jisaacks'} Ruby Gems
+      
+    = nav_link "Hire Me"   , resume_path                              , :class => 'a hire-me'    , :controller => 'resumes'
+
