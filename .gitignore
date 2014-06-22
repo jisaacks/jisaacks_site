@@ -17,3 +17,5 @@
 
 # Ignore private run commands
 .privaterc
+
+.ruby-version

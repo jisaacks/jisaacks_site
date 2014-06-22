@@ -28,6 +28,10 @@ gem 'rack-rewrite', '~> 1.2.1'
 
 gem "imgur", "~> 0.2.0"
 
+gem 'capistrano', '~> 3.2.0'
+gem 'curb', '~> 0.8.3'
+gem 'eventmachine', '~> 1.0.3'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -51,7 +55,8 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
+  gem 'mysql2'
 end
 
 gem 'jquery-rails'
